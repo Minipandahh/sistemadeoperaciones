@@ -46,3 +46,57 @@ body{background:#f3f6fd}
 .ops-state-pendiente,.state-pendiente{--state:#ec9c19;--state-light:#fff5df}.ops-state-confirmada,.state-confirmada{--state:#3684d7;--state-light:#edf6ff}.ops-state-asignado,.state-asignado{--state:#7557d7;--state-light:#f3efff}.ops-state-en_camino,.state-en_camino{--state:#0aa3a3;--state-light:#e9fbfb}.ops-state-pasajero_a_bordo,.state-pasajero_a_bordo{--state:#188f56;--state-light:#e8faee}.ops-state-completado,.state-completado{--state:#7f9b90;--state-light:#eef5f1}.ops-state-cancelado,.state-cancelado{--state:#d96363;--state-light:#fff0f0}
 .ops-status-cell{min-width:132px}.status-strong{display:block;background:var(--state);color:#fff;padding:8px 9px;border-radius:8px;font-size:11px;font-weight:900;letter-spacing:.035em;text-align:center;margin-bottom:6px;white-space:nowrap}.ops-status-cell select{background:#fff!important;border:1px solid var(--state)!important;width:100%;font-size:11px!important}
 .ops-driver-cell{min-width:172px}.driver-identity{padding:8px;border-radius:8px;line-height:1.2;font-weight:900;font-size:12px;margin-bottom:5px;overflow-wrap:anywhere}.driver-assigned .driver-identity{background:#dbf5e5;color:#096b3a;border:1px solid #7dcca3}.driver-missing .driver-identity{background:#ffe8e8;color:#a12735;border:1px solid #efa2a2}.ops-driver-cell .ops-select{width:100%;max-width:none!important}.ops-row-arroyado{outline:2px solid #c32e3d;outline-offset:-1px;box-shadow:inset 6px 0 #c32e3d!important;background:#fff0f0!important}.flag-toggle{border:1px solid #db7d85;border-radius:9px;background:white;color:#9e2837;font-weight:850;font-size:11px;min-height:35px;padding:7px 10px;cursor:pointer;white-space:nowrap}.flag-toggle:hover{background:#ffe6e8}.flag-toggle.is-marked{background:#b92336!important;color:white!important;border-color:#b92336!important}.flag-arroyado{background:#b92336;color:white;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:950}.ops-stat.arroyados-stat{background:#fff0f1;border:2px solid #ec9aa4;cursor:pointer}.ops-stat.arroyados-stat strong{color:#b92336}.ops-stat.arroyados-stat span{color:#8c2935;font-weight:900}.ops-stat.arroyados-stat:hover{background:#ffe1e5}.mobile-service{border-left:6px solid var(--state)!important;background:var(--state-light)!important}.mobile-service.marked-arroyado{outline:2px solid #b92336!important}.mobile-driver{border:1px solid #cbd8e9;padding:10px 12px;border-radius:9px;font-size:12px;margin:9px 0;font-weight:750;display:flex;gap:6px;align-items:center;flex-wrap:wrap}.mobile-driver.has-driver{background:#e4f8eb;color:#066335}.mobile-driver.missing-driver{background:#ffeded;color:#9c2733}.quick-driver-banner{display:flex;flex-direction:column;gap:4px;border-radius:12px;padding:16px;margin-bottom:10px}.quick-driver-banner span{font-size:10px;font-weight:850;letter-spacing:.07em}.quick-driver-banner strong{font-size:23px}.quick-driver-banner small{font-size:13px}.quick-driver-banner.has-driver{background:#dcf8e9;color:#0a713f}.quick-driver-banner.missing-driver{background:#ffe7e7;color:#a02735}.quick-flag{width:100%;margin:0 0 16px;min-height:43px}.ops-tabs .ops-tab[data-mesa-filter="arroyados"]{color:#aa2638;border-color:#eba2ad;font-weight:900}.ops-tabs .ops-tab[data-mesa-filter="arroyados"].selected{background:#b92336!important;color:white!important}.ops-table .ops-select{min-width:135px!important}.ops-board .table-scroll{overflow:auto}.ops-table{min-width:1450px}.ops-table th{white-space:nowrap}.mobile-service .flag-toggle{flex:1;min-width:145px}@media(max-width:760px){.ops-stat.arroyados-stat{grid-column:auto}.mobile-service .service-actions{display:flex;flex-wrap:wrap}.quick-driver-banner strong{font-size:20px}}
+
+
+/* TransferOps: refinamiento móvil de separación y claridad entre reservas */
+@media (max-width:780px) {
+  .mobile-services {
+    display: flex !important;
+    flex-direction: column;
+    gap: 22px !important;
+    padding: 10px 2px 24px !important;
+  }
+  .mobile-service {
+    flex: 0 0 auto;
+    margin: 0 !important;
+    padding: 19px 17px 20px !important;
+    border-radius: 22px !important;
+    border-top: 1px solid #dbe3f0 !important;
+    border-right: 1px solid #dbe3f0 !important;
+    border-bottom: 1px solid #dbe3f0 !important;
+    box-shadow: 0 9px 24px rgba(22, 43, 80, .10) !important;
+    isolation: isolate;
+  }
+  .mobile-service.marked-arroyado {outline-offset: 2px !important}
+  .mobile-service .service-top {column-gap: 9px;row-gap: 9px}
+  .mobile-service .service-main {margin: 17px 0 13px !important;gap: 10px}
+  .mobile-service .mobile-driver {
+    margin: 14px 0 !important;
+    padding: 14px 13px !important;
+    border-radius: 13px !important;
+    line-height: 1.45;
+  }
+  .mobile-service .service-route {
+    margin: 14px 0 0 !important;
+    padding: 15px 15px !important;
+    border-radius: 15px !important;
+    gap: 7px !important;
+  }
+  .mobile-service .service-route strong {font-size: 13px;line-height: 1.5}
+  .mobile-service .service-chips {margin-top: 15px !important;gap: 9px !important}
+  .mobile-service .service-chips span {padding: 8px 10px !important;border-radius: 9px}
+  .mobile-service .service-meta {margin-top: 14px !important;line-height: 1.5}
+  .mobile-service .service-extras {margin-top: 12px !important;padding: 12px 13px !important;border-radius: 12px !important;line-height: 1.5}
+  .mobile-service .service-actions {margin-top: 19px !important;gap: 10px !important;align-items: stretch}
+  .mobile-service .service-button, .mobile-service .flag-toggle {
+    min-height: 50px !important;
+    border-radius: 12px !important;
+    line-height: 1.3;
+  }
+  .mobile-service .service-assign {margin-top: 16px !important;padding: 14px !important;border-radius: 14px !important}
+}
+@media (max-width:365px) {
+  .mobile-service {padding: 16px 13px 18px !important}
+  .mobile-services {gap: 18px !important}
+  .mobile-service .service-actions {gap: 7px !important}
+}
