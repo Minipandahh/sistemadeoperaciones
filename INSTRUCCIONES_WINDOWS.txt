@@ -1,0 +1,23 @@
+TRANSFEROPS - VUELOS (WINDOWS)
+
+IMPORTANTE: NO ABRIR vuelos.html CON DOBLE CLIC. FILE:// BLOQUEA LA CONEXION.
+
+METODO A (si tienes PHP instalado):
+1. Extrae esta carpeta del ZIP.
+2. Haz doble clic en INICIAR_SERVIDOR.bat
+3. Entra a http://localhost:8000/vuelos.html
+4. Pulsa "Cerca de PUJ".
+
+METODO B (si utilizas XAMPP):
+1. Instala XAMPP desde apachefriends.org, y abre XAMPP Control Panel.
+2. Copia toda la carpeta del proyecto a C:\xampp\htdocs\transferops\
+3. Inicia Apache en XAMPP.
+4. Entra a http://localhost/transferops/vuelos.html
+5. Pulsa "Cerca de PUJ".
+
+NO FUNCIONA con Visual Studio Code Live Server porque Live Server no ejecuta PHP.
+
+SI APARECE HTTP 403/429: el proveedor externo rechazo o limito la consulta.
+SI APARECE sin senal: no se detecto un avion con ese indicativo actualmente.
+No se muestran horarios de aterrizaje certificados ni cancelaciones.
+Para uso comercial constante contacta al proveedor y revisa su licencia.
